@@ -2,8 +2,8 @@
 import os
 from pypdf import PdfReader
 from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
 
 from src.common.logger import get_logger
 from src.common.custom_exception import CustomException
@@ -56,4 +56,5 @@ def create_text_chunks(documents):
         error_message = CustomException("Failed to generate chunks" , e)
         logger.error(str(error_message))
         return []
+
 

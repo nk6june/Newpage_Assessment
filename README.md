@@ -10,13 +10,13 @@ The RAG Medical ChatBot is an intelligent, document-aware conversational system 
 The application combines a LangGraph-powered agentic reasoning loop with FAISS vector search and a cloud-hosted LLM (Groq / LLaMA 3.1), delivered through a responsive Streamlit web interface.
 
 ## 2. Key Features
-•	Upload and process one or more medical PDF documents
-•	Automatic text extraction, chunking, and embedding generation
-•	FAISS vector store for fast semantic similarity search
-•	LangGraph ReAct agent with memory and tool-use capabilities
-•	Groq-hosted LLaMA 3.1 (8B) for low-latency inference
-•	Persistent conversation history within a session via thread IDs
-•	Modular, extensible architecture for adding new tools (e.g., web search)
+-	Upload and process one or more medical PDF documents
+-	Automatic text extraction, chunking, and embedding generation
+-	FAISS vector store for fast semantic similarity search
+-	LangGraph ReAct agent with memory and tool-use capabilities
+-	Groq-hosted LLaMA 3.1 (8B) for low-latency inference
+-	Persistent conversation history within a session via thread IDs
+-	Modular, extensible architecture for adding new tools (e.g., web search)
 
 ## 3. Technology Stack
 
@@ -33,12 +33,12 @@ The application combines a LangGraph-powered agentic reasoning loop with FAISS v
 
 
 ## Current limitations:
-• Single-user only (MemorySaver is per-process, not shared)
-• PDF processing is synchronous — blocks the UI for large files
-• FAISS index lives on disk locally, cannot scale horizontally
-• No authentication or rate limiting
-• Guardrails module exists but is commented out
-• No job queue — one large upload can freeze the entire app
+- Single-user only (MemorySaver is per-process, not shared)
+- PDF processing is synchronous — blocks the UI for large files
+- FAISS index lives on disk locally, cannot scale horizontally
+- No authentication or rate limiting
+- Guardrails module exists but is commented out
+- No job queue — one large upload can freeze the entire app
 
 ## Improvements:
 1. FastAPI Backend — Replace Streamlit for Production

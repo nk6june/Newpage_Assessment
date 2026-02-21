@@ -9,3 +9,5 @@ huggingface_hub
 python-dotenv
 sentence-transformers
 streamlit
+langfuse==2.60.8
+

@@ -41,7 +41,7 @@ The application combines a LangGraph-powered agentic reasoning loop with FAISS v
 - No job queue — one large upload can freeze the entire app
 
 ## Improvements:
-1. FastAPI Backend — Replace Streamlit for Production
+1. FastAPI Backend — Replace for Production and can integrate to Streamlit or React App
 2. Redis Caching Layer
 3. Celery Worker — Async PDF Processing
 4. Scalable Vector Store — Replace Local FAISS

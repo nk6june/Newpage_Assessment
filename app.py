@@ -8,8 +8,12 @@ from src.components.agents import create_agent
 
 load_dotenv()
 
-st.set_page_config(page_title="Agentic RAG Chatbot")
-st.title("📚 Agentic RAG - Chat with Your PDF")
+# st.set_page_config(page_title="Agentic RAG Chatbot")
+st.set_page_config(
+    page_title="Agentic RAG Chatbot",
+    page_icon="https://img.icons8.com/fluency/48/doctors-bag.png"
+)
+st.title("RAG Medical ChatBot")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -110,3 +114,4 @@ if user_input:
 # # Apply guardrails
 # safe_response = apply_guardrails(full_response)
 # response_container.markdown(safe_response)
+

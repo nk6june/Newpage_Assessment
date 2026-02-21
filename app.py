@@ -9,6 +9,7 @@ from src.components.agents import create_agent
 load_dotenv()
 
 # st.set_page_config(page_title="Agentic RAG Chatbot")
+# st.title("RAG Medical ChatBot")
 st.markdown(
     """
     <h1>
@@ -18,7 +19,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.title("RAG Medical ChatBot")
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -119,6 +120,7 @@ if user_input:
 # # Apply guardrails
 # safe_response = apply_guardrails(full_response)
 # response_container.markdown(safe_response)
+
 
 
 

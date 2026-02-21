@@ -2,7 +2,7 @@ import streamlit as st
 import uuid
 from dotenv import load_dotenv
 import os
-from langfuse.callback import CallbackHandler
+# from langfuse.callback import CallbackHandler
 
 from src.components.pdf_loader import get_pdf_text, create_text_chunks
 from src.components.vector_store import save_vector_store
@@ -10,19 +10,19 @@ from src.components.agents import create_agent
 
 load_dotenv()
 
-lang_skey = os.environ["LANGFUSE_SECRET_KEY"]
-lang_pkey = os.environ["LANGFUSE_PUBLIC_KEY"]
-lang_host = os.environ["LANGFUSE_HOST"]
+# lang_skey = os.environ["LANGFUSE_SECRET_KEY"]
+# lang_pkey = os.environ["LANGFUSE_PUBLIC_KEY"]
+# lang_host = os.environ["LANGFUSE_HOST"]
 
-#Initialize Langfuse CallbackHandler
-langfuse_handler = CallbackHandler(
-    public_key=lang_pkey,
-    secret_key=lang_skey,
-    host=lang_host,
-    session_id="Agentic RAG Pipeline",
-    trace_name="Agentic RAG Pipeline",
-    user_id="User"
-)
+# #Initialize Langfuse CallbackHandler
+# langfuse_handler = CallbackHandler(
+#     public_key=lang_pkey,
+#     secret_key=lang_skey,
+#     host=lang_host,
+#     session_id="Agentic RAG Pipeline",
+#     trace_name="Agentic RAG Pipeline",
+#     user_id="User"
+# )
 
 # st.set_page_config(page_title="Agentic RAG Chatbot")
 # st.title("RAG Medical ChatBot")
@@ -137,6 +137,7 @@ if user_input:
 # # Apply guardrails
 # safe_response = apply_guardrails(full_response)
 # response_container.markdown(safe_response)
+
 
 
 

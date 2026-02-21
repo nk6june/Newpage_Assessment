@@ -8,10 +8,15 @@ from src.components.agents import create_agent
 
 load_dotenv()
 
-# st.set_page_config(page_title="Agentic RAG Chatbot")
-st.set_page_config(
-    page_title="Agentic RAG Chatbot",
-    page_icon="https://img.icons8.com/fluency/48/doctors-bag.png"
+st.set_page_config(page_title="Agentic RAG Chatbot")
+st.markdown(
+    """
+    <h1>
+        <img src="https://img.icons8.com/fluency/48/doctors-bag.png" width="40">
+        RAG Medical ChatBot
+    </h1>
+    """,
+    unsafe_allow_html=True
 )
 st.title("RAG Medical ChatBot")
 
@@ -114,4 +119,5 @@ if user_input:
 # # Apply guardrails
 # safe_response = apply_guardrails(full_response)
 # response_container.markdown(safe_response)
+
 

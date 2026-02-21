@@ -9,12 +9,11 @@ def create_agent(vector_store):
 
     llm = load_llm()
     retriever_tool = create_retriever_tool(vector_store)
-    # web_tool = create_web_tool()
-
     agent = create_react_agent(
         llm,
         tools=[retriever_tool],
         checkpointer=MemorySaver(),
     )
+
 
     return agent

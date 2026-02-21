@@ -11,12 +11,11 @@ The application combines a LangGraph-powered agentic reasoning loop with FAISS v
 
 ## 2. Key Features
 -	Upload and process one or more medical PDF documents
--	Automatic text extraction, chunking, and embedding generation
--	FAISS vector store for fast semantic similarity search
+-	Text extraction, chunking, and embedding generation
+-	FAISS vector store for semantic similarity search
 -	LangGraph ReAct agent with memory and tool-use capabilities
 -	Groq-hosted LLaMA 3.1 (8B) for low-latency inference
 -	Persistent conversation history within a session via thread IDs
--	Modular, extensible architecture for adding new tools (e.g., web search)
 
 ## 3. Technology Stack
 
@@ -36,14 +35,14 @@ The application combines a LangGraph-powered agentic reasoning loop with FAISS v
 - Single-user only (MemorySaver is per-process, not shared)
 - PDF processing is synchronous — blocks the UI for large files
 - FAISS index lives on disk locally, cannot scale horizontally
-- No authentication or rate limiting
-- Guardrails module exists but is commented out
+- No authentication or rate limiting 
+- Guardrails module exists but is commented out now
 - No job queue — one large upload can freeze the entire app
 
 ## Improvements:
-1. FastAPI Backend — Replace for Production and can integrate to Streamlit or React App
+1. FastAPI Backend — Replace for Production and can be binded to Streamlit or React App
 2. Redis Caching Layer
 3. Celery Worker — Async PDF Processing
-4. Scalable Vector Store — Replace Local FAISS
-5. Guardrails — Activate Existing Module
-6. Docker Compose — Full Stack Deployment
+4. Scalable Vector Store DB  — Can Replace Local FAISS
+5. Guardrails — To activate Existing Module
+6. Docker Compose + CI/CD + Kubernetes(AKS or EKS) — Full Stack Deployment

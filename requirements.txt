@@ -7,9 +7,6 @@ faiss-cpu
 pypdf
 huggingface_hub
 python-dotenv
-langfuse==2.60.8
 sentence-transformers
 streamlit
-
-
 

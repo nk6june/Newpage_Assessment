@@ -1,13 +1,15 @@
-<div align="center">
+<img width="1360" height="207" alt="image" src="https://github.com/user-attachments/assets/d6675ca5-c0cf-4f4f-a68d-69f5d43ac66b" /><div align="center">
 
 ## RAG Medical ChatBot  
 ### Technical Architecture & System Documentation
-
 </div>
 
 ## 1. Project Overview
 The RAG Medical ChatBot is an intelligent, document-aware conversational system built on the Retrieval-Augmented Generation (RAG) paradigm. It enables users to upload medical PDF documents and ask natural language questions, receiving accurate answers grounded in the uploaded content.
 The application combines a LangGraph-powered agentic reasoning loop with FAISS vector search and a cloud-hosted LLM (Groq / LLaMA 3.1), delivered through a responsive Streamlit web interface.
+
+<img width="1360" height="207" alt="image" src="https://github.com/user-attachments/assets/2d2262d8-5fad-47d6-b10c-9962c4132b01" />
+
 
 ## 2. Key Features
 -	Upload and process one or more medical PDF documents
@@ -37,6 +39,7 @@ The application combines a LangGraph-powered agentic reasoning loop with FAISS v
 - FAISS index lives on disk locally, cannot scale horizontally
 - No authentication or rate limiting 
 - Guardrails module exists but is commented out now
+- Langfuse commented out and can activate for Observability and Monitoring. 
 - No job queue — one large upload can freeze the entire app
 
 ## Improvements:

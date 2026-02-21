@@ -23,5 +23,5 @@ RUN pip install --no-cache-dir -e .
 ## Expose only flask port
 EXPOSE 5000
 
-## Run the Flask app
-CMD ["streamlit", "run", "app.py"]
+## Run the Streamlit app
+CMD ["streamlit", "run", "app.py"] 

@@ -117,7 +117,7 @@ if user_input:
                         "configurable": {
                             "thread_id": st.session_state.thread_id
                         },
-                        "callbacks": [langfuse_handler]
+                        # "callbacks": [langfuse_handler]
                     }
                 )
 
@@ -137,6 +137,7 @@ if user_input:
 # # Apply guardrails
 # safe_response = apply_guardrails(full_response)
 # response_container.markdown(safe_response)
+
 
 
 

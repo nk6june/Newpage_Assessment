@@ -1,5 +1,3 @@
-<img width="1360" height="207" alt="image" src="https://github.com/user-attachments/assets/d6675ca5-c0cf-4f4f-a68d-69f5d43ac66b" /><div align="center">
-
 ## RAG Medical ChatBot  
 ### Technical Architecture & System Documentation
 </div>

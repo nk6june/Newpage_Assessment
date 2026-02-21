@@ -19,15 +19,16 @@ def create_retriever_tool(vector_store):
 
     return retrieve_docs
 
-def create_web_tool():
+# def create_web_tool():
 
-    search = TavilySearchResults(max_results=3)
+#     search = TavilySearchResults(max_results=3)
 
-    @tool
-    def web_search(query: str) -> str:
-        """
-        Use this tool to search the web for up-to-date information.
-        """
-        return search.invoke({"query": query})
+#     @tool
+#     def web_search(query: str) -> str:
+#         """
+#         Use this tool to search the web for up-to-date information.
+#         """
+#         return search.invoke({"query": query})
 
-    return web_search
+
+#     return web_search
